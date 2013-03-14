@@ -1,5 +1,5 @@
 ##Syntax &amp; Formatting
-Please note that Sass is the language and SCSS is simply a syntactically different version of the Sass language. The SCSS syntax is more representational of CSS, a language we all know and love, and is the syntax we should use at LFO moving forward. When I refer to or mention Sass in this document, it is implied that I am referring to the SCSS syntax of the Sass language.  Additionally, all code examples will be written in SCSS and will use the .scss files extention.
+Please note that Sass is the language and SCSS is simply a syntactically different version of the Sass language. The SCSS syntax is more representational of CSS, a language we all know and love, and is the syntax I prefer using in my projects. When I refer to or mention Sass in this document, it is implied that I am referring to the SCSS syntax of the Sass language.  Additionally, all code examples will be written in SCSS and will use the .scss files extention.
 
 **Sass Syntax:**
 ```css
@@ -17,7 +17,7 @@ Please note that Sass is the language and SCSS is simply a syntactically differe
 ```
 
 ##Comments
-Sass supports both visible and invisible comments.  Using <code>//</code> before any SCSS will place a comment in your SCSS code and will exclude it from the processed CSS.  Using standard <code>/* */</code> CSS comments will not only place a comment in your code, but will also include it in the processed CSS.  Personally, I would recommend that we be very generous with our comments, especially early on in the process, as they will help other developers know what we're trying to accomplish and hopefully improve the debugging process.
+Sass supports both visible and invisible comments.  Using <code>//</code> before any SCSS will place a comment in your SCSS code and will exclude it from the processed CSS.  Using standard <code>/* */</code> CSS comments will not only place a comment in your code, but will also include it in the processed CSS.  Personally, I recommend being very  generous with your comments, especially if you're working on large teams, as it will help other developers know what you're trying to accomplish and hopefully improve the debugging process.
 
 ```css
 /* Im a visible comment and will show up in the processed CSS!*/
@@ -34,7 +34,7 @@ $bg-color: #eee;
 ```
 
 ##Variables
-Sass allows you to store variables for later use, which eliminates the need to perform error prone search and replace functions every time you need to change a background color. Instead, simply change the value of the variable and let the Sass processor do the work for you! Variables are a extremely beneficial to the FED workflow and will go along way in terms of helping us make changes faster and more efficiently.
+Sass allows you to store variables for later use, which eliminates the need to perform error prone search and replace functions every time you need to change a background color. Instead, simply change the value of the variable and let the Sass processor do the work for you! Variables are a extremely beneficial to your workflow and will go along way in terms of making changes faster and more efficiently.
 
 **How to use:**
 ```css
@@ -47,7 +47,7 @@ $cox-primary-button-color: #236DA6   // bold blue
 ```
 
 ##Nesting
-Indenting in Sass is NOT like indenting in CSS.  In Sass, nesting has meaning and uses the white space to declare parent child relationships.  This can be very powerful as it lets the FED inherit the parent selector so you don't have to repeat the beginning of selectors over and over again.  However, it's important to note that with great power, comes great responsibility!  Be careful not to fall in to the trap of nesting things unnecessarily or you will end up with bloated CSS and some pretty insane selector inheritance.  As a general rule of thumb, if you are tabbing a third time, pause and ask yourself, "is this declaration really that specific to this namespace or can it be abstracted?"
+Indenting in Sass is NOT like indenting in CSS.  In Sass, nesting has meaning and uses the white space to declare parent child relationships.  This can be very powerful as it lets you inherit the parent selector so you don't have to repeat the beginning of selectors over and over again.  However, it's important to note that with great power, comes great responsibility!  Be careful not to fall in to the trap of nesting things unnecessarily or you will end up with bloated CSS and some pretty insane selector inheritance.  As a general rule of thumb, if you are tabbing a third time, pause and ask yourself, "is this declaration really that specific to this namespace or can it be abstracted?"
 
 **Good Example of Nesting with SCSS:**
 ```css
@@ -170,10 +170,10 @@ Individual media queries can also be nested inside of a selector, changing prope
 ```
 
 ###Selector Naming Conventions
-Stay consistent and utilize the same pattern in our CSS by using underscore delimited lowercase selectors.  For example, <code>.my_awesome_class {}</code>.
+This is all preference, just make sure you stay consistent and utilize the same patterns already being utilized in your project or on your team.  For example, <code>.my_awesome_class {}</code>.
 
 ##Mixins
-Mixins are one of the most powerful features in Sass, as it enables the FED to create logical chunks of code that can be reused again and again.  They are defined using the <code>@mixin</code> directive which takes a block of styles that can then be included in another selector using the <code>@include</code> directive. It is generally considered best practice to pass in arguments when using mixins.  Arguments are declared as a parenthesized, comma-seperated list of variables. Each of those variables is then assigned a value each time the mixin is used.
+Mixins are one of the most powerful features in Sass, as it lets you create logical chunks of code that can be reused again and again.  They are defined using the <code>@mixin</code> directive which takes a block of styles that can then be included in another selector using the <code>@include</code> directive. It is generally considered best practice to pass in arguments when using mixins.  Arguments are declared as a parenthesized, comma-seperated list of variables. Each of those variables is then assigned a value each time the mixin is used.
 
 **Setting up the mixin:**
 ```css
